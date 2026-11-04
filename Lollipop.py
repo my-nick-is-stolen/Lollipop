@@ -1,21 +1,11 @@
-import sys, os, time, getpass, warnings, base64, hashlib
+import os, getpass, warnings, base64, hashlib
 from time import sleep
-
+import CLI_Colors
 import cryptography
 from cryptography.fernet import Fernet
-os.system("")
 
 os.system("cls" if os.name == "nt" else "clear")
-try:
-    import CLI_Colors
-except:
-   for i in range(10, 0, -1):
-       print(f"\033[41;37m\033[2J\033[H\nFATAL\nResource CLI_Colors.py not found\nRestart in {i}s...\n" + (" " * 80 + "\n") * 50, end="", flush=True)
-       time.sleep(1)
-   print("\033[0m\033[2J\033[H", end="")
-   os.execv(sys.executable, [sys.executable] + sys.argv)
-os.system("cls" if os.name == "nt" else "clear")
-print(f"{CLI_Colors.info} LOLLIPOP TEST VERSION 1")
+print(f"{CLI_Colors.info} LOLLIPOP Encrypter Open Source Project")
 def get_cipher(password: str):
     key_bytes = hashlib.sha256(password.encode()).digest()
     fernet_key = base64.urlsafe_b64encode(key_bytes)
@@ -106,7 +96,7 @@ while cn:
                 print(f"\n{CLI_Colors.error} Key is Invalid")
         input("Press Enter to continue...")
     elif option == ("a" or "[a]" or "about"):
-        print(f"{CLI_Colors.info} Lollipop v1\nLightweight Encryption/Decryption Program Written in Python\nDesigned for Maximum Compatibility\nWrote by human on Earth")
+        print(f"{CLI_Colors.info} Lollipop v1\nLightweight Encryption/Decryption Program Written in Python\nFully Open Source\nWrote by human on Earth")
         input("Press Enter to continue...")
     elif option == ("q" or "[q]" or "quit"):
         cn = False
