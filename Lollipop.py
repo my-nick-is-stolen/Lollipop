@@ -1,4 +1,5 @@
 import sys, os, time, getpass, warnings, base64, hashlib
+from time import sleep
 
 import cryptography
 from cryptography.fernet import Fernet
@@ -61,7 +62,7 @@ print(r"""
                                                                                             
                                                                                             
 """)
-input("Press enter to continue...")
+sleep(1)
 cn = True
 while cn:
     os.system("cls" if os.name == "nt" else "clear")
@@ -105,7 +106,7 @@ while cn:
                 print(f"\n{CLI_Colors.error} Key is Invalid")
         input("Press Enter to continue...")
     elif option == ("a" or "[a]" or "about"):
-        print(f"{CLI_Colors.info} Lollipop v1\nLightweight Encryption/Decryption Program Written in Python\nDesigned for Maximum Compatibility\nWrote by Human on Planet Earth")
+        print(f"{CLI_Colors.info} Lollipop v1\nLightweight Encryption/Decryption Program Written in Python\nDesigned for Maximum Compatibility\nWrote by human on Earth")
         input("Press Enter to continue...")
     elif option == ("q" or "[q]" or "quit"):
         cn = False
