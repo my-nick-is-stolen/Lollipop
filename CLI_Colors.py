@@ -4,14 +4,14 @@ dim = "\033[2m"
 underline = "\033[4m"
 invert = "\033[7m"
 
-blackt = "\033[30m"
-redt = "\033[31m"
-greent = "\033[32m"
-yellowt = "\033[33m"
-bluet = "\033[34m"
-purplet = "\033[35m"
-cyant = "\033[36m"
-whitet = "\033[37m"
+black = "\033[30m"
+red = "\033[31m"
+green = "\033[32m"
+yellow = "\033[33m"
+blue = "\033[34m"
+purple = "\033[35m"
+cyan = "\033[36m"
+white = "\033[37m"
 
 blackbg = "\033[40m"
 redbg = "\033[41m"
@@ -22,6 +22,6 @@ purplebg = "\033[45m"
 cyanbg = "\033[46m"
 whitebg = "\033[47m"
 
-info = bluet+"[INFO]"+reset
-error = redt+"[ERROR]"+reset
-warning = yellowt+"[WARNING]"+reset
+info = blue+"[INFO]"+reset
+error = red+"[ERROR]"+reset
+warning = yellow+"[WARNING]"+reset
