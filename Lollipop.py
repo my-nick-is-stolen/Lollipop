@@ -96,7 +96,7 @@ while cn:
                 print(f"\n{CLI_Colors.error} Key is Invalid")
         input("Press Enter to continue...")
     elif option == ("a" or "[a]" or "about"):
-        print(f"{CLI_Colors.info} Lollipop v1\nLightweight Encryption/Decryption Program Written in Python\nFully Open Source\nWrote by human on Earth")
+        print(f"{CLI_Colors.info} Lollipop \nLightweight Encryption/Decryption Program Written in Python\nFully Open Source\nWrote by human on Earth")
         input("Press Enter to continue...")
     elif option == ("q" or "[q]" or "quit"):
         cn = False
