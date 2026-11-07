@@ -4,7 +4,7 @@ import cryptography
 from cryptography.fernet import Fernet
 
 os.system("cls" if os.name == "nt" else "clear")
-print(f"{CLI_Colors.info} LOLLIPOP Encrypter Open Source Project")
+print(f"{CLI_Colors.info} LOLLIPOP Open Source Project")
 def get_cipher(password: str):
     key_bytes = hashlib.sha256(password.encode()).digest()
     fernet_key = base64.urlsafe_b64encode(key_bytes)
