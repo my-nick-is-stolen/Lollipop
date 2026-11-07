@@ -1,5 +1,4 @@
-import os, getpass, warnings, base64, hashlib
-from time import sleep
+import os, getpass, warnings, base64, hashlib, time, sys
 import CLI_Colors
 import cryptography
 from cryptography.fernet import Fernet
@@ -52,7 +51,7 @@ print(r"""
                                                                                             
                                                                                             
 """)
-sleep(1)
+time.sleep(1)
 cn = True
 while cn:
     os.system("cls" if os.name == "nt" else "clear")
@@ -62,7 +61,7 @@ while cn:
  / /___/ /_/ / / / / ____/ /_/ / /_/ /
 /_____/\____/_/_/_/_/    \____/ .___/ 
                              /_/      """)
-    print(f"[e] Encrypt    [d] Decrypt    [a] About    [q] Quit")
+    print(f"[e] Encrypt    [d] Decrypt    [a] About    [q] Quit    [r] Restart")
     option = input("Chose an option...    ").lower().strip()
     if option == ("e" or "[e]" or "encrypt"):
         warnings.filterwarnings("error", category=getpass.GetPassWarning)
@@ -99,7 +98,16 @@ while cn:
         print(f"{CLI_Colors.info} Lollipop \nLightweight Encryption/Decryption Program Written in Python\nFully Open Source\nWrote by human on Earth")
         input("Press Enter to continue...")
     elif option == ("q" or "[q]" or "quit"):
+        os.system("cls" if os.name == "nt" else "clear")
         cn = False
+    elif option == ("r" or "[r]" or "restart"):
+        print("Restart in 3")
+        time.sleep(1)
+        print("Restart in 2")
+        time.sleep(1)
+        print("Restart in 1")
+        time.sleep(1)
+        os.execv(sys.executable, [sys.executable] + sys.argv)
     else:
         input(f"{CLI_Colors.error} Invalid Option, Press Enter to continue...")
 
